@@ -1,0 +1,411 @@
+.vacancies {
+  padding: 0 0 110px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  @media (max-width: 1440px) {
+    background-size: 1400px;
+  }
+  .container {
+    @media (max-width: 990px) {
+      max-width: 636px;
+      padding: 0 25px;
+    }
+  }
+  // .vacancies__title
+
+  &__title {
+    font-size: 35px;
+    line-height: 42px;
+    color: #333333;
+    font-family: "Gilroy-Semibold", sans-serif;
+    margin-bottom: 56px;
+  }
+
+  // .vacancies__columns
+
+  &__columns {
+    display: flex;
+    justify-content: space-between;
+
+    @media (max-width: 990px) {
+      flex-wrap: wrap;
+    }
+    @media (max-width: 640px) {
+      justify-content: center;
+    }
+  }
+
+  // .vacancies__column
+
+  &__column {
+    flex: 0 1 380px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    &-md768 {
+      display: none;
+    }
+    &-md320 {
+      display: none;
+    }
+    @media (max-width: 1440px) {
+      flex: 0 1 300px;
+    }
+    @media (max-width: 990px) {
+      flex: 0 1 290px;
+      display: none;
+      &-md768 {
+        display: block;
+        margin-right: 5px;
+        .item-vacancies__copy {
+          bottom: 25px;
+        }
+        &_2 {
+          margin-right: 0;
+
+          .item-vacancies__copy {
+            display: none;
+          }
+        }
+      }
+    }
+    @media (max-width: 634px) {
+      &-md768 {
+        display: none;
+        .item-vacancies__copy {
+          display: none;
+        }
+        &_2 {
+          .item-vacancies__copy {
+            display: block;
+            bottom: -60px;
+            font-size: 12px;
+            line-height: 14px;
+            transform: translateX(15%);
+          }
+        }
+      }
+      &-md320 {
+        display: block;
+        .item-vacancies__copy {
+          display: block;
+          bottom: -60px;
+          font-size: 12px;
+          line-height: 14px;
+          transform: translateX(15%);
+        }
+      }
+    }
+    @media (max-width: 425px) {
+      flex: 0 1 270px;
+      &-md768 {
+        &:last-child {
+          .item-vacancies__copy {
+            transform: translateX(10%);
+          }
+        }
+      }
+      &-md320 {
+        .item-vacancies__copy {
+          transform: translateX(10%);
+        }
+      }
+    }
+  }
+
+  // .vacancies__item
+
+  &__item {
+    margin-bottom: 28px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.item-vacancies {
+  max-width: 380px;
+  background: linear-gradient(152.08deg, #FFFFFF -6.99%, #FFFFFF 122.31%);
+  box-shadow: 0px 4px 50px rgba(10, 159, 48, 0.3);
+  border-radius: 20px;
+  overflow: hidden;
+  border: 2px solid #0A9F30;
+  &.active {
+    .item-vacancies__content {
+      display: block;
+    }
+  }
+
+  @media (max-width: 1440px) {
+    max-width: 300px;
+    width: 100%;
+  }
+  @media (max-width: 990px) {
+    max-width: 290px;
+  }
+  @media (max-width: 425px) {
+    max-width: 270px;
+  }
+
+  // .item-vacancies__header
+
+  &__header {
+    background-color: #0A9F30;
+    height: 90px;
+    display: flex;
+    align-items: center;
+    padding: 0 30px;
+  }
+
+  // .item-vacancies__icon
+
+  &__icon {
+    margin-right: 22px;
+    position: relative;
+    width: 40px;
+    height: 53px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    img {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -60%);
+    }
+  }
+
+  // .item-vacancies__title
+
+  &__title {
+    font-weight: 800;
+    font-size: 18px;
+    line-height: 24px;
+    color: #fff;
+    font-family: "Gilroy-Bold", sans-serif;
+    p {
+      margin: 0;
+    }
+  }
+
+  // .item-vacancies__content
+
+  &__content {
+    padding: 30px 20px 44px 32px;
+    @media (max-width: 1440px) {
+      padding: 28px 20px 37px 33px;
+    }
+    @media (max-width: 425px) {
+      padding: 23px 20px 40px 23px;
+      display: none;
+    }
+  }
+
+  // .item-vacancies__tech
+
+  &__tech {
+    font-size: 20px;
+    line-height: 24px;
+    color: #333333;
+    padding-left: 45px;
+    position: relative;
+    margin-bottom: 20px;
+    font-family: "Gilroy-Bold", sans-serif;
+    &::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 32px;
+      height: 19px;
+      background-image: url(../img/vacancies/tag.svg);
+    }
+    @media (max-width: 1440px) {
+      font-size: 16px;
+      line-height: 26px;
+    }
+    @media (max-width: 425px) {
+      font-size: 16px;
+      line-height: 19px;
+    }
+
+  }
+
+  // .item-vacancies__tech-list
+
+  &__tech-list {
+    margin-bottom: 35px;
+    @media (max-width: 425px) {
+      margin-bottom: 30px;
+    }
+  }
+
+  // .item-vacancies__btn
+
+  &__btn {
+    height: 38px;
+    background: rgba(10, 159, 48, 0.2);
+    border: 1px solid #0A9F30;
+    border-radius: 10px;
+    font-size: 18px;
+    line-height: 22px;
+    color: #0A9F30;
+    max-width: 197px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Gilroy-Bold", sans-serif;
+  }
+
+
+  // .item-vacancies__info
+
+  &__info {
+    background: linear-gradient(152.08deg, #FFFFFF -6.99%, #FFFFFF 122.31%);
+    box-shadow: 0px 4px 50px rgba(10, 159, 48, 0.3);
+    border-radius: 20px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 256px;
+  }
+
+  // .item-vacancies__info-quotes
+
+  &__info-quotes {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    img {
+      position: absolute;
+      &:first-child {
+        top: 12px;
+        left: 14px;
+      }
+      &:last-child {
+        bottom: 21px;
+        right: 25px;
+        transform: rotate(180deg);
+      }
+    }
+  }
+
+  // .item-vacancies__info-text
+
+  &__info-text {
+    font-size: 18px;
+    line-height: 24px;
+    color: #000;
+    max-width: 195px;
+    margin-bottom: 13px;
+  }
+
+  // .item-vacancies__info-item
+
+  &__info-item {
+    margin-bottom: 9px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  // .item-vacancies__info-label
+
+  &__info-label {
+    color: #0A9F30;
+    font-family: "Gilroy-Bold", sans-serif;
+    margin-bottom: 5px;
+    @media (max-width: 425px) {
+      font-size: 12px;
+    }
+  }
+
+  // .item-vacancies__info-tel
+
+  &__info-tel {
+    color: #000;
+    font-size: 18px;
+    display: block;
+    padding-left: 20px;
+    font-family: "Gilroy-Bold", sans-serif;
+    position: relative;
+    &::before {
+      content: '';
+      position: absolute;
+      width: 14px;
+      height: 13px;
+      left: 0;
+      top: 3px;
+      background-image: url(../img/vacancies/tel.svg);
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+    @media (max-width: 425px) {
+      font-size: 14px;
+    }
+  }
+   // .item-vacancies__info-mail
+  &__info-mail {
+    color: #000;
+    font-size: 16px;
+    display: block;
+    padding-left: 20px;
+    font-family: "Gilroy-Bold", sans-serif;
+    position: relative;
+    &::before {
+      content: '';
+      position: absolute;
+      width: 17px;
+      height: 11px;
+      left: 0;
+      top: 4px;
+      background-image: url(../img/vacancies/email.svg);
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+    @media (max-width: 425px) {
+      font-size: 12px;
+    }
+  }
+
+  // .item-vacancies__copy
+
+  &__copy {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    font-size: 14px;
+    line-height: 17px;
+    text-align: right;
+    color: #0A9F30;
+    p {
+      margin: 0;
+    }
+    @media (max-width: 990px) {
+      text-align: left;
+      right: auto;
+      left: 0;
+    }
+  }
+}
+.tech-list {
+  max-width: 275px;
+  // .tech-list__item
+
+  &__item {
+    font-size: 18px;
+    line-height: 30px;
+    align-items: center;
+    color: #333333;
+  }
+}
+
