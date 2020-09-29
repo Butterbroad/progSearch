@@ -161,10 +161,22 @@ input:focus::placeholder {
   -webkit-flex: 0 1 230px;
       -ms-flex: 0 1 230px;
           flex: 0 1 230px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .header__logo img {
   max-width: 100%;
+}
+
+.header__logo_md {
+  display: none;
 }
 
 .links {
@@ -1399,6 +1411,16 @@ input:focus::placeholder {
   }
 }
 
+@media (max-width: 1025px) {
+  .header__logo {
+    display: none;
+  }
+
+  .header__logo_md {
+    display: block;
+  }
+}
+
 @media (max-width: 1023px) {
   .header__wrapper {
     height: 140px;
@@ -2029,4 +2051,9 @@ input:focus::placeholder {
   .hero__content {
     min-height: 360px;
   }
+}
+
+@media (max-width: 1023px) {
+
+  .webp .hero { background-image: url(../img/hero/hero-bg-768.webp) !important; }
 }
